@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   // styles: ['h2 {color:red;}'],
 })
-export class AppComponent {}
+export class AppComponent {
+  name = 'Alex';
+
+  getName() {
+    return this.name;
+  }
+}

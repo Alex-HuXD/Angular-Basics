@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,4 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent {
   @Input() postImg = '';
+
+  @Output() clickImg = new EventEmitter<{ name: string; payload: string }>();
+
+  emitImg = () => {
+    let data = {
+      name: '123',
+      payload: this.postImg,
+    };
+    this.clickImg.emit(data);
+  };
 }

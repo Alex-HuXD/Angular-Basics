@@ -17,4 +17,8 @@ export class AppComponent {
   changeImg(e: KeyboardEvent) {
     this.imgURL = (e.target as HTMLInputElement).value;
   }
+
+  logMsg(e: { name: string; payload: string }) {
+    console.log(e.payload);
+  }
 }

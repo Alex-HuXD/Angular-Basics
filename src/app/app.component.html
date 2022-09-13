@@ -1,6 +1,6 @@
 <input type="text" (keyup)="changeImg($event)" [value]="imgURL" />
 
-<app-post [postImg]="imgURL"></app-post>
+<app-post [postImg]="imgURL" (clickImg)="logMsg($event)"></app-post>
 
 <h2>Hello World!! My name is {{ name[2].toUpperCase() }}</h2>
 

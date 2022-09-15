@@ -1,6 +1,8 @@
 <input type="text" (keyup)="changeImg($event)" [value]="imgURL" />
 
-<app-post [postImg]="imgURL" (clickImg)="logMsg($event)"></app-post>
+<app-post [postImg]="imgURL" (clickImg)="logMsg($event)">
+  <p>come text from parent component</p>
+</app-post>
 
 <h2>Hello World!! My name is {{ name[2].toUpperCase() }}</h2>
 

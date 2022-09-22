@@ -1,3 +1,11 @@
+<button
+  (click)="changeColor($event)"
+  [ngClass]="{ blue: blueClass }"
+  [ngStyle]="{ 'font-size.em': fontSize }"
+>
+  change color class
+</button>
+<hr />
 <input type="text" (keyup)="changeImg($event)" [value]="imgURL" />
 
 <app-post [postImg]="imgURL" (clickImg)="logMsg($event)">

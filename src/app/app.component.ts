@@ -17,6 +17,10 @@ export class AppComponent {
     size: 'large',
   };
 
+  blueClass = false;
+
+  fontSize = 6;
+
   getName() {
     return this.name;
   }
@@ -27,6 +31,10 @@ export class AppComponent {
 
   logMsg(e: { name: string; payload: string }) {
     console.log(e.payload);
+  }
+
+  changeColor(e: MouseEvent) {
+    this.blueClass = !this.blueClass;
   }
 
   //use agular tool to verify that pipe only modify the displayed view but not the stored state

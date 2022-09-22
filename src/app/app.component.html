@@ -14,3 +14,14 @@
 <p>Hello {{ getName() }}</p>
 
 <p>{{ 15 + 12 }}</p>
+
+<p>{{ cost | currency: "JPY" }}</p>
+
+<!-- pipe can be chained togather -->
+<p>{{ number | number: "1.0-2" | currency: "USD" }}</p>
+
+<!-- json pipe are most used for debugging! -->
+<pre>
+  pizza:
+    {{ pizza | json }}
+</pre>

@@ -10,6 +10,12 @@ export class AppComponent {
   name = 'alex hu';
   imgURL = 'https://picsum.photos/id/237/500/500';
   date = new Date();
+  cost = 2000;
+  number = 25.3;
+  pizza = {
+    topping: 'tomato, cheese',
+    size: 'large',
+  };
 
   getName() {
     return this.name;
@@ -23,6 +29,7 @@ export class AppComponent {
     console.log(e.payload);
   }
 
+  //use agular tool to verify that pipe only modify the displayed view but not the stored state
   constructor() {
     console.log(this.date);
   }

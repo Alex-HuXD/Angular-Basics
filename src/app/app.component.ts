@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   // styles: ['h2 {color:red;}'],
 })
 export class AppComponent {
-  name = 'Alex';
+  name = 'alex hu';
   imgURL = 'https://picsum.photos/id/237/500/500';
+  date = new Date();
 
   getName() {
     return this.name;
@@ -20,5 +21,9 @@ export class AppComponent {
 
   logMsg(e: { name: string; payload: string }) {
     console.log(e.payload);
+  }
+
+  constructor() {
+    console.log(this.date);
   }
 }

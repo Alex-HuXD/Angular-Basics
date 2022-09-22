@@ -4,7 +4,12 @@
   <p>come text from parent component</p>
 </app-post>
 
-<h2>Hello World!! My name is {{ name[2].toUpperCase() }}</h2>
+<h2>Hello World!! My name is {{ name | titlecase }}</h2>
+
+<p>
+  today is {{ date | date: "MMMM d,y, HH:mm ":"GMT-0600" }} (
+  <span>All times in Central Time</span> )
+</p>
 
 <p>Hello {{ getName() }}</p>
 

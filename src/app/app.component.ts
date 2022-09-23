@@ -17,6 +17,14 @@ export class AppComponent {
     size: 'large',
   };
 
+  imgURLs = [
+    'https://picsum.photos/id/232/500/500',
+    'https://picsum.photos/id/231/500/500',
+    'https://picsum.photos/id/233/500/500',
+    'https://picsum.photos/id/234/500/500',
+    'https://picsum.photos/id/235/500/500',
+  ];
+
   blueClass = false;
 
   fontSize = 6;

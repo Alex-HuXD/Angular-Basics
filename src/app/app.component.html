@@ -1,3 +1,9 @@
+<ng-template [ngIf]="blueClass">
+  <p>Button is blue.</p>
+</ng-template>
+
+<!-- short hand syntax for above code -->
+
 <button
   (click)="changeColor($event)"
   [ngClass]="{ blue: blueClass }"
@@ -8,8 +14,12 @@
 <hr />
 <input type="text" (keyup)="changeImg($event)" [value]="imgURL" />
 
-<app-post [postImg]="imgURL" (clickImg)="logMsg($event)">
-  <p>come text from parent component</p>
+<app-post
+  *ngFor="let img of imgURLs; let i = index"
+  [postImg]="img"
+  (clickImg)="logMsg($event)"
+>
+  <p>come text from parent component {{ i }}</p>
 </app-post>
 
 <h2>Hello World!! My name is {{ name | titlecase }}</h2>
